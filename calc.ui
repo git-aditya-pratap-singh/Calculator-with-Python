@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Calculater</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>index.png</normaloff>index.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>17.000000000000000</double>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form{
+background:#e6e6e6;
+}</string>
+  </property>
+  <widget class="QWidget" name="gridWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>100</y>
+     <width>511</width>
+     <height>399</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>22</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#gridWidget{
+background:#e6e6e6;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="spacing">
+     <number>7</number>
+    </property>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="push_square">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_square{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_square:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>x²</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="push_point">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_point{
+ border:0px;
+ background:#fff;
+}
+#push_point:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QPushButton" name="push_1">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_1{
+ border:0px;
+ background:#fff;
+}
+#push_1:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="push_cv">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_cv{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_cv:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>^</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="push_b">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>33</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_b{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_b:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>1/x</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="push_5">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_5{
+ border:0px;
+ background:#fff;
+}
+#push_5:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="push_div">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_div{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_div:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>÷</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="push_3">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_3{
+ border:0px;
+ background:#fff;
+}
+#push_3:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="push_7">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_7{
+ border:0px;
+ background:#fff;
+}
+#push_7:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="push_del">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>33</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_del{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_del:hover{
+background:#ff0e42;
+ color:#fff;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Del</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="push_add">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_add{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_add:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="QPushButton" name="push_plus_mi">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_plus_mi{
+ border:0px;
+ background:#fff;
+}
+#push_plus_mi:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>+/-</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="push_9">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_9{
+ border:0px;
+ background:#fff;
+}
+#push_9:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="push_mul">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_mul{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_mul:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="push_sub">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_sub{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_sub:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="push_2">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_2{
+ border:0px;
+ background:#fff;
+}
+#push_2:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="push_c">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>33</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_c{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_c:hover{
+background:#5500ff;
+color:#fff;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>C</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="push_a">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>33</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_a{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_a:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>%</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="push_8">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_8{
+ border:0px;
+ background:#fff;
+}
+#push_8:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="push_0">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_0{
+ border:0px;
+ background:#fff;
+}
+#push_0:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="push_cube">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_cube{
+ border:0px;
+ background:#f1f1f1;
+}
+#push_cube:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>x³</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="push_4">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_4{
+ border:0px;
+ background:#fff;
+}
+#push_4:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="push_equal">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_equal{
+ border:0px;
+ background:#99ff89;
+}
+#push_equal:hover{
+background:#60ff65;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="push_6">
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#push_6{
+ border:0px;
+ background:#fff;
+}
+#push_6:hover{
+background:#c0c0c0;
+ border:2px solid #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>511</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>104</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#lineEdit{
+background:#e6e6e6;
+border:0px;
+font-size:50px;
+color:black;
+}
+</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+   </property>
+   <property name="placeholderText">
+    <string>0</string>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
